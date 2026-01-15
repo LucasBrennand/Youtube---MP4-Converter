@@ -16,7 +16,7 @@ const ParticlesBackground = () => {
     () => ({
       background: {
         color: {
-          value: "#020617", // Cor de fundo (Slate-950)
+          value: "#020617",
         },
       },
       fpsLimit: 120,
@@ -24,7 +24,7 @@ const ParticlesBackground = () => {
         events: {
           onHover: {
             enable: true,
-            mode: "repulse", // Partículas fogem do mouse
+            mode: "repulse",
           },
         },
         modes: {
@@ -59,7 +59,7 @@ const ParticlesBackground = () => {
           density: {
             enable: true,
           },
-          value: 80, // Quantidade de partículas
+          value: 80,
         },
         opacity: {
           value: 0.5,
