@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import ParticlesBackground from "./components/ParticlesBackground";
+import Footer from "./components/Footer";
 
 function App() {
   const [url, setUrl] = useState("");
@@ -14,7 +15,9 @@ function App() {
 
     try {
       const response = await axios.get(
-        `https://youtube-mp4-converter-c2qj.onrender.com/info?url=${encodeURIComponent(url)}`
+        `https://youtube-mp4-converter-c2qj.onrender.com/info?url=${encodeURIComponent(
+          url
+        )}`
       );
       setVideoData(response.data);
     } catch (error) {
@@ -28,7 +31,9 @@ function App() {
   };
 
   const handleDownload = () => {
-    window.location.href = `https://youtube-mp4-converter-c2qj.onrender.com/download?url=${encodeURIComponent(url)}`;
+    window.location.href = `https://youtube-mp4-converter-c2qj.onrender.com/download?url=${encodeURIComponent(
+      url
+    )}`;
   };
 
   return (
@@ -81,6 +86,7 @@ function App() {
           )}
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }
